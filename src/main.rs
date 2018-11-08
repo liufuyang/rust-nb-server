@@ -12,7 +12,6 @@ mod rust_nb;
 use self::rust_nb::{Feature, Model, ModelHashMapStore};
 use rocket::State;
 use rocket_contrib::json::{Json, JsonValue};
-use std::collections::HashMap;
 use std::sync::Mutex;
 
 type ModelName = String;
