@@ -27,7 +27,7 @@ struct UpdateInput {
 
 #[derive(Serialize, Deserialize)]
 struct PredictInput {
-    features: Vec<Feature>,
+    features: Vec<Vec<Feature>>,
 }
 
 #[put("/<model_name>", format = "json", data = "<input>")]
@@ -38,7 +38,7 @@ fn update(
 ) -> JsonValue {
     let mut model = model_in_mem.lock().expect("map lock.");
 
-    model.train(&model_name, input.0.updates);
+    model.train(&model_name, &input.0.updates);
 
     json!({ "status": "ok" })
 }
@@ -51,9 +51,9 @@ fn predict(
 ) -> JsonValue {
     let model = model_in_mem.lock().expect("map lock.");
 
-    let prediction = model.predict(&model_name, &input.0.features);
+    let prediction = model.predict_batch(&model_name, &input.0.features);
 
-    json!(prediction)
+    json!({ "predictions": prediction })
 }
 
 #[get("/")]
