@@ -7,11 +7,11 @@ extern crate rocket_contrib;
 #[macro_use]
 extern crate serde_derive;
 
-mod rust_nb;
+extern crate rust_nb;
 
-use self::rust_nb::{Feature, Model, ModelHashMapStore};
 use rocket::State;
 use rocket_contrib::json::{Json, JsonValue};
+use rust_nb::{Feature, Model, ModelHashMapStore};
 use std::sync::Mutex;
 
 type ModelName = String;
