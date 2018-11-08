@@ -1,0 +1,13 @@
+[package]
+name = "rust-nb-server"
+version = "0.1.0"
+authors = ["Fuyang Liu <liufuyang@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4.0-rc.1"
+rocket_contrib = "0.4.0-rc.1"
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+regex = "1"
