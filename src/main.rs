@@ -83,6 +83,6 @@ fn main() {
         .mount("/model", routes![update, predict])
         .register(catchers![not_found])
         .register(catchers![bad_request])
-        .manage(Mutex::new(Model::new()))
+        .manage(Mutex::new(Model::new().with_default_gaussian_m2(1000.0)))
         .launch();
 }

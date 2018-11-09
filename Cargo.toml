@@ -11,5 +11,5 @@ serde = "1.0"
 serde_json = "1.0"
 serde_derive = "1.0"
 regex = "1"
-rust_nb = { git = "git://github.com/liufuyang/rust-nb", rev = "2d032a11342f71fa6a56b2a8f4d138c4ef97266d"}
+rust_nb = { git = "git://github.com/liufuyang/rust-nb", rev = "ec3aba8ee9b2c7499ee1beac202d0057a1a6e7aa"}
 # rust_nb = { path = "../rust-nb" }
