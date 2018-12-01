@@ -1,0 +1,14 @@
+[development]
+workers = 4
+address = "0.0.0.0"
+port = 8000
+log = "normal"
+limits = { forms = 32768 }
+
+
+[production]
+workers = 4
+address = "0.0.0.0"
+port = 8000
+log = "critical"
+limits = { forms = 32768 }

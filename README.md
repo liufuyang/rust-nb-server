@@ -111,3 +111,13 @@ Example output will be:
     ]
 }
 ```
+
+---
+
+## About docker image
+```
+# optional, if you want to build locally
+# docker build -t rust-nb-server .
+
+docker run --rm --name rust-nb-server -p 8000:8000 liufuyang/rust-nb-server
+```
