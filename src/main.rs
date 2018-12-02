@@ -84,7 +84,7 @@ fn main() {
         .register(catchers![not_found])
         .register(catchers![bad_request])
         .manage(Mutex::new(
-            Model::new().with_pseudo_count(0.5).with_prior_factor(0.0),
+            Model::new().with_pseudo_count(0.5).with_prior_factor(1.0),
         ))
         .launch();
 }
